@@ -1,0 +1,21 @@
+name: Feature request
+description: An idea, or something the app should do and doesn't yet.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What are you trying to do?
+      description: The production task, in your own words. This helps more than a description of a button.
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you do it today?
+      description: In this app, another tool, or by hand.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+      description: How you picture it working. Please describe it in your own words; don't paste another product's help text or screenshots of its screens.

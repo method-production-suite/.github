@@ -1,0 +1,53 @@
+name: Bug report
+description: Something is wrong, a figure doesn't add up, or the app crashed.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please never attach a real budget, schedule or unreleased script: an invented file that shows the problem is always enough.
+        Security problem? Don't open an issue; report it privately from the repository's **Security** tab.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you got instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Choose ...
+        3. ... shows ...
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Help > About, the command line's `--version`, or the commit you built from.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Computer
+      options:
+        - macOS
+        - Windows
+        - Linux
+    validations:
+      required: true
+  - type: checkboxes
+    id: crash
+    attributes:
+      label: Crash or lost work
+      options:
+        - label: The app crashed, froze, or lost something I had typed.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error messages or logs
+      description: Paste any error text. Check it for names, rates or other private details first.
+      render: text
