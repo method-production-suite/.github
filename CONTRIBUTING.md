@@ -22,7 +22,9 @@ without writing a line:
 - **Translate and explain.** Translations, plainer wording in the apps and guides for people
   doing the job for the first time.
 
-Open an issue in the app's repository and say what you checked and what you found. Every
+Open an issue in the app's repository and say what you checked and what you found, or
+start a conversation in
+[GitHub Discussions](https://github.com/orgs/method-production-suite/discussions). Every
 release names the people who helped, film knowledge included.
 
 ## The one hard rule: clean room
