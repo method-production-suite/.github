@@ -4,6 +4,27 @@ Thanks for helping. Bug reports, small fixes and larger patches are all welcome.
 lives in its own repository; this file is the default for all of them, and a repository's
 own README, `CLEAN-ROOM.md`, `AGENTS.md` or `CONTRIBUTING.md` wins where they differ.
 
+## No code needed
+
+Most of what these apps need is film knowledge, not code. If you make films, you can help
+without writing a line:
+
+- **Check the numbers.** Import an old budget or schedule (an invented one, or your own
+  that you keep to yourself) and tell us where a figure, a fringe or a day count differs
+  from what you expect.
+- **Check your region.** Rates, fringes, holidays, currencies and union rules vary. Tell us
+  what your region does that the apps get wrong or don't know yet.
+- **Test on your devices.** Method Reader needs people with Kobo, tolino and reMarkable
+  readers to try a book and report what they see.
+- **Share how you work.** The report layouts, boards, call sheets and charts of accounts
+  your productions use (as blank templates), so the apps match real practice.
+- **Make samples.** Invented scripts, budgets and schedules for tests and tutorials.
+- **Translate and explain.** Translations, plainer wording in the apps and guides for people
+  doing the job for the first time.
+
+Open an issue in the app's repository and say what you checked and what you found. Every
+release names the people who helped, film knowledge included.
+
 ## The one hard rule: clean room
 
 The apps are independent, clean-room work. When you contribute:
@@ -44,6 +65,12 @@ describes, never in a public issue.
    `cargo xtask ci`, or `cargo fmt --check`, `cargo clippy --workspace --all-targets -- -D warnings`
    and `cargo test --workspace`. The README says which.
 4. Open a pull request that says what changed and why, and links the issue.
+
+### AI-assisted changes
+
+AI-assisted changes are welcome on an accepted issue, with passing tests, from an author
+who can explain every line. Say in the pull request if you used AI tools. The apps
+themselves contain no generative AI, and changes that add it won't be accepted.
 
 ### What every change keeps
 
