@@ -24,7 +24,7 @@ without writing a line:
 
 Open an issue in the app's repository and say what you checked and what you found, or
 start a conversation in
-[GitHub Discussions](https://github.com/orgs/method-production-suite/discussions). Every
+[GitHub Discussions](https://github.com/method-production-suite/.github/discussions). Every
 release names the people who helped, film knowledge included.
 
 ## The one hard rule: clean room
