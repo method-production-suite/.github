@@ -26,15 +26,13 @@ Mac builds have been checked by a person so far. This check covers Linux.
 
 ```bash
 sudo pacman -S --needed base-devel git curl wget file openssl gtk3 webkit2gtk-4.1 \
-  libayatana-appindicator librsvg xdotool fuse2 udisks2 github-cli
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain none
-source "$HOME/.cargo/env"
+  libayatana-appindicator librsvg xdotool fuse2 udisks2 github-cli rustup
 gh auth login        # the person signs in; read access is enough
 ```
 
 `webkit2gtk-4.1` is for Budget and Schedule (their window is a web view); Reader and
 Storyteller draw their own window. `fuse2` lets AppImages run. Each repository pins its own
-Rust version in `rust-toolchain.toml`; rustup fetches it on the first build.
+Rust version in `rust-toolchain.toml`; Arch's `rustup` fetches it on the first build.
 
 Record for the report: `uname -r`, `pacman -Q webkit2gtk-4.1 gtk3`, the compositor and its
 version (`hyprctl version | head -1`), and whether the session is Wayland
