@@ -34,7 +34,12 @@ gh auth login        # the person signs in; read access is enough
 Storyteller draw their own window. `fuse2` lets AppImages run. Each repository pins its own
 Rust version in `rust-toolchain.toml`; Arch's `rustup` fetches it on the first build.
 
-Record for the report: `uname -r`, `pacman -Q webkit2gtk-4.1 gtk3`, the compositor and its
+**Check the CPU first: `uname -m`.** `x86_64` follows every step below. `aarch64` (ARM, for
+example Arch on Apple silicon or another ARM board) follows the same steps, except step 3:
+the released Linux apps are x86_64 builds and won't run there, so on ARM each app is built
+from source as a release build and checked from that. Say which in every report.
+
+Record for the report: `uname -m`, `uname -r`, `pacman -Q webkit2gtk-4.1 gtk3`, the compositor and its
 version (`hyprctl version | head -1`), and whether the session is Wayland
 (`echo $XDG_SESSION_TYPE`).
 
@@ -57,7 +62,14 @@ and how long the build and tests took.
 
 ## 3. Install the released Linux builds
 
-Use the AppImage where there is one (Arch has no `.deb` or `.rpm` support out of the box):
+**On aarch64 (ARM):** skip the AppImages. Build each app in release mode from the clones in
+step 2 and run that build instead (each README says how; usually `cargo build --release
+--locked`, and for Budget and Schedule the desktop app's own build command in their
+README). Reader is the one exception with an ARM download: its command-line tool,
+`method-reader-cli-linux-arm64.tar.gz`, so check that release file too. The x86_64
+installers stay unchecked by a person until an x86_64 machine runs this step.
+
+**On x86_64:** use the AppImage where there is one (Arch has no `.deb` or `.rpm` support out of the box):
 
 | App | Release | Linux files |
 |---|---|---|
